@@ -1,6 +1,6 @@
 ESERCITAZIONE FINALE
 
-Programmazione ad Oggetti con C# 8
+Programmazione ad Oggetti con Visual Studio C# 8
 
 Progetto Console - Sistema di Gestione Flotta Veicoli
 
