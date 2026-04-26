@@ -1,0 +1,130 @@
+Progetto reale basato su un caso di studio vero :-)
+    Cliente: Privato
+    Necessità: Applicazione Web
+    Ambito: Ecommerce di servizi
+    Prodotti: Corsi online
+    Specifiche: davvero incerte…
+    
+Il cliente desidera realizzare un sito web per la vendita
+di corsi online.
+Il suo obiettivo è replicare parzialmente le funzionalità
+di un sito più “famoso” (udemy)
+L’idea è che un utente si registri al sistema, e acquisti
+un corso che è stato caricato da un altro utente. Il
+sistema trattiene una percentuale (Fee) sulle
+transazioni.
+
+ANALISI INIZIALE
+Attori del sistema:
+    1) Utente
+    2) Insegnante
+    3) Amministratore
+Eventi del sistema:
+    1) Insegnante carica i corsi online
+    2) Utente acquista i corsi online
+    3) Amministratore paga periodicamente gli insegnanti
+    in base ai corsi venduti nel periodo
+    4) Utente può recensire un corso acquistato
+    
+CAMPI per TABELLA
+1) Utente
+    a) Username
+    b) password
+    c) data di nascita
+2) Insegnante
+    a) Username
+    b) password
+    c) Data di nascita
+3) Corso
+    a) durata (minuti)
+    b) costo
+    c) titolo
+    d) caricatoDaInsegnante
+    e) tipoCorso
+    f) dataCaricamento
+4) Tipologia di corso
+    a) nome
+    b) parole chiave
+5) RecensioneCorso
+    a) voto (1-10)
+    b) idAcquisto
+    c) idCorso (aggiunto per coerenza con i dati richiesti)
+    d) dataRecensione
+6) Acquisto
+    a) idUtenteCheAcquista
+    b) pagamentoTotale
+    c) extra
+    d) data
+7) CarrelloAcquisti
+    a) id
+    b) idAcquisto
+    c) idCorsoAcquistato
+    8) PagamentoInsegnante
+    a) importo totale
+    b) dal
+    c) al
+9) PagamentoInsegnanteCorsi
+    a) idPagamentoInsegnante
+    b) idCarrelloAcquisti
+    c) importoPagato
+    d) data
+
+
+#Da inserire nel database!!#
+Utenti
+      1)Mario Rossi
+      2)Luigi Russi
+Insegnanti
+      1) Giuseppe Gialli
+      2) Franco Neri
+      3) Michele Gialli
+Tipologia corsi
+      1) Domestici - parole chiave “casa, bambini, pulizia”
+      2) informatica - parole chiave “tecnologia, sql, programmazione, matematica”
+      3) fai da te - parole chiave “attrezzi, risultati, casa”
+      4) tutorial -parole chiave “tecnologia, casa, attrezzi”
+Corsi 
+      1) Corso di cucito, durata 100 min, inserito da insegnante 1, costo 5€, tipo 1
+      2) Corso di c++, durata 50min inserito da insegnante 2, costo 10€, tipo 2
+      3) corso di giardinaggio, durata 100min, inserito da insegnante 1, costo 10€, tipo 3
+      4) corso di pattinaggio, durata 200min, inserito da insegnante 3, costo 10€, tipo 4
+      5) corso sui corsi online, durata 500min, inserito da insegnante 1, costo 50€, tipo 4
+      6) corso su basi di dati,durata 1000min, inserito da insegnante 2, costo 150€, tipo 2
+      7) corso di sopravvivenza, dur. 500min, inserito da insegnante 1, costo 20€, tipo 4
+      8) corso di buone maniere, dur. 200min, inserito da insegnante 3, costo 10€, tipo 4
+      (NOTA: le date di caricamento sono a piacere, nel 2021)
+Acquisti
+      1) Utente 1 acquista in una unica transazione corsi 1,5,8 in data 2022-01-15, pagamento
+        totale 65€ e zero extra
+      2) Utente 2 acquista corso 6 in data 2022-01-26 pagamento totale 150€ extra 10€
+      3) utente 1 acquista corso 7 in data 2022-02-26 pagamento totale 20€ extra 2€
+      4) utente 2 acquista corso 8 e corso 3 in data 2022-03-01 pagamento tot 20€ extra 1€
+      5) Utente 2 acquista corso 7 in data 2022- 03- 02 pagamento totale 20€ extra 0
+Recensioni
+      1) recensisce l’acquisto del corso 1 nell’acquisto 1 in data 2022-01-17 con votazione 5
+      2)recensisce l’acquisto del corso 5 nell’acquisto 1 in data 2022-02-20 con votazione 7
+      3)recensisce l’acquisto del corso 6 nell’acquisto 2 in data 2022-02-27 con votazione 7
+      4) recensisce l’acquisto del corso 8 nell’acquisto 1 in data 2022-03-05 con votazione 9
+      5)recensisce l’acquisto del corso 7 nell’acquisto 3 in data 2022-03-07 con votazione 3
+Pagamenti
+      1) totale 50€, carrello 1 per insegnante 1 eseguito il 2-2-2022
+      2) totale 9€, carrello 1 insegnante 3 eseguito il 2-2-2022
+
+QUERY DA ESEGUIRE
+      1) Durata media di un corso
+      2) Costo medio di un corso
+      3) durata del corso più venduto
+      4) tipo di corso che costa di più
+      5) tipo del corso che costa di meno
+      6) quanti corsi sono di tipo “informatica”
+      7) quanti acquisti ha fatto “mario rossi” a febbraio
+      2022
+      8) quanti corsi ha venduto michele gialli a marzo
+      2022
+      9) Il corso con il voto di recensioni più alto
+      10) la media dei voti per tutti i corsi in base alle
+      recensioni registrate
+      11) quanto ha guadagnato giuseppe gialli fino ad
+      oggi
+      12) quanto ha guadagnato giuseppe gialli fino a
+      febbraio
