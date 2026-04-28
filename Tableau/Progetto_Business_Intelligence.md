@@ -1,4 +1,5 @@
-Progetto Business Intelligence
+#Progetto Business Intelligence
+
 Rappresenta con un opportuna Dashboard i dati contenuti nell'Excel Attivita_centro_di_formazione.xlsx
 
 Cerca di estrapolare informazioni utili all'azienda, ad esempio:
