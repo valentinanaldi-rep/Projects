@@ -13,3 +13,7 @@ Cerca di estrapolare informazioni utili all'azienda, ad esempio:
 
 Fai attenzione anche alla pulizia dei dati (ad esempio alla presenza di outlier, mancanza di uniformità
 all'interno delle categorie, eccetera)
+
+Risultato:
+
+<img width="1559" height="1046" alt="immagine" src="https://github.com/user-attachments/assets/65f235c3-dd4d-4d8d-a3c2-b99330b9f004" />
