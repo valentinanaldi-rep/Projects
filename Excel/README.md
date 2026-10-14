@@ -1,7 +1,7 @@
 Dataset Superstore Sales acquisito dalla pagina web di Tableau Public
 https://public.tableau.com/app/resources/sample-data
 
- Creata dai dati una Dashboard interattiva per rappresentare come variano i profitti in
+ Dashboard interattiva per rappresentare come variano i profitti in
  base alle varie dimensioni di analisi:  order_date, segment, region, category e subcategory.
 
  
